@@ -41,9 +41,11 @@ namespace KidoboticsSecurity
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // getting tha mainwindow's window handel
             var hWnd = new WindowInteropHelper(Application.Current.MainWindow).EnsureHandle();
+
+            // changine the window display affinity of the main window
             bool state = SetWindowDisplayAffinity(hWnd, WDA_MONITOR);
-                
         }
     }
 }
